@@ -3,14 +3,13 @@ const server = express();
 server.use(express.json());
 require("dotenv").config();
 
-const usersRouter = require("./users/users-router");
+const usersRouter = require("./api/user/user-router");
 
-server.use("/users", usersRouter);
+server.use("/user", usersRouter);
 
 server.get("/", (req, res) => {
   res.status(200).json({
-    statusCode: 200,
-    message: process.env.MESSAGE || "Hey server is up and running..",
+    message: process.env.MESSAGE || "Hey server is up and run..",
   });
 });
 

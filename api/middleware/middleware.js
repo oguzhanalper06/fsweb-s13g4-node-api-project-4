@@ -1,4 +1,4 @@
-const users = require("./../users/users");
+const users = require("./../user/users");
 
 function logger(req, res, next) {
   const method = req.method;
